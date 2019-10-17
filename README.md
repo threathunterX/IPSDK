@@ -19,8 +19,8 @@
     一. 环境准备
         linux， python3.6, mongo4.0/mysql5.6（任意一种）
         
-        安装依赖包 pip isntall -r requirements.txt
+        安装依赖包 pip install -r requirements.txt
     
     二. 启动任务
-        后台执行：nohup pyhton demo_mysql.py &  或者选择supervisor启动任务   
+        后台执行：nohup python demo_mysql.py &  或者选择supervisor启动任务   
                  
