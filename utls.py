@@ -393,7 +393,7 @@ class IpToMysql(object):
                            "`city` varchar(30) COMMENT '市'," \
                            "`owner` varchar(30) COMMENT '所有者'," \
                            "`operator` varchar(30) COMMENT '运营商'," \
-                           " primary key (ip));".format(table=self.table)
+                           " primary key (ip)) DEFAULT CHARSET=utf8;".format(table=self.table)
         cursor.execute(sql)
         conn.commit()
         cursor.close()
