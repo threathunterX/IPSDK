@@ -185,7 +185,7 @@ class DownLoad(object):
             file_path = "./download/" + file_name
             with open(file_path, "wb") as code:
                 code.write(r.content)
-            cmd = "gunzip {file}".format(file=file_path)
+            cmd = "gunzip -f {file}".format(file=file_path)
             subprocess.call(cmd, shell=True)
             status_upload(file_name.split(".")[0], "download")
             return True
@@ -447,7 +447,7 @@ def produce():
             for f in added:
                 try:
                     if ".gz" in f:
-                        subprocess.call("gunzip ./download/{file_old} && mv ./download/{file_new} ./task/ ".
+                        subprocess.call("gunzip -f ./download/{file_old} && mv ./download/{file_new} ./task/ ".
                                         format(file_old=f, file_new=f.split('.')[0]),
                                         shell=True)
                     elif not f.isdigit():
