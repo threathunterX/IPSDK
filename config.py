@@ -20,7 +20,7 @@ class Config(object):
         :return: {"uri": "", "db": "", "collection": ""}
         """
         return {
-            "uri": "mongodb://{user}:{password}@{host}:3717",
+            "uri": "mongodb://{user}:{password}@{host}:{port}",
             "db": "blackip",
             "collection": "blackip"
         }
